@@ -17,8 +17,9 @@ class Human : public Player {
           Human(string name1);
           string makeMove() override;
           string getName() override;
-          void addUser();
-          void addHighscore;
+          void addUser(string name1);
+          void addHighscore(int highscore1);
+          void changeHighscore(string name1, int highscore1);
 };
 
 #endif
