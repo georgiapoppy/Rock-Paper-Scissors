@@ -22,6 +22,11 @@ string Human::getName() {
 }
 
 void Human::addUser(string name1) {
+    for (int i=0; i++; i<users.size()) {
+        if (users[i] == name1) {
+            return;
+        }
+    }
     users.push_back(name1);
 }
 
