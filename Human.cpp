@@ -50,3 +50,21 @@ void Human::changeHighscore(string name1, int highscore1) {
     }
     users.close()
 }
+
+int Human::getHighscore(string name1) {
+    std::string line;
+    std::ofstream users("users.txt");
+    int found = 0;
+    int highscore;
+    while (std::getline(users, line)) {
+        if (found = 1) {
+            highscore = line;
+            found = 0;
+        }
+        if (line == name1) {
+            found = 1;
+        }
+    }
+    users.close()
+        return highscore;
+}
