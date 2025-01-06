@@ -30,8 +30,8 @@ void Human::addUser(string name1) {
     users.push_back(name1);
 }
 
-void Human::addHighscore(int highscore1) {
-    highscores.push_back(highscore1);
+void Human::addHighscore() {
+    highscores.push_back(0);
 }
 
 void Human::changeHighscore(string name1, int highscore1) {
