@@ -20,6 +20,7 @@ class Human : public Player {
           string getName() override;
           void addUser(string name1);
           void changeHighscore(string name1, int highscore1);
+          int getHighscore(string name1);
 };
 
 #endif
