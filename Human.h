@@ -5,20 +5,20 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
+#include <fstream>
+
 using namespace std;
 
 class Human : public Player {
        private:
           string name;
-          vector<string> users;
-          vector<int> highscores;
+          ofstream highscores("highscores.txt");
        public:
           Human();
           Human(string name1);
           string makeMove() override;
           string getName() override;
           void addUser(string name1);
-          void addHighscore(int highscore1);
           void changeHighscore(string name1, int highscore1);
 };
 
