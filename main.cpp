@@ -7,16 +7,16 @@ using namespace std;
 
 int main() {
 
-    std::cout << "            ____   ___   ____ _  __ " std::endl;
-    std::cout << "           |  _ \ / _ \ / ___| |/ / " std::endl;
-    std::cout << "           | |_) | | | | |   | ' /  " std::endl;
-    std::cout << "           |  _ <| |_| | |___| . \  " std::endl;
-    std::cout << "           |_| \_\\___/ \____|_|\_\ " std::endl;
-    std::cout << "         ____   _    ____  _____ ____  " std::endl;
-    std::cout << "        |  _ \ / \  |  _ \| ____|  _ \ " std::endl;
-    std::cout << "        | |_) / _ \ | |_) |  _| | |_) |" std::endl;
-    std::cout << "        |  __/ ___ \|  __/| |___|  _ < " std::endl;
-    std::cout << "        |_| /_/   \_\_|   |_____|_| \_\" std::endl;
+    std::cout << "             ____   ___   ____ _  __ " std::endl;
+    std::cout << "            |  _ \ / _ \ / ___| |/ / " std::endl;
+    std::cout << "            | |_) | | | | |   | ' /  " std::endl;
+    std::cout << "            |  _ <| |_| | |___| . \  " std::endl;
+    std::cout << "            |_| \_\\___/ \____|_|\_\ " std::endl;
+    std::cout << "          ____   _    ____  _____ ____  " std::endl;
+    std::cout << "         |  _ \ / \  |  _ \| ____|  _ \ " std::endl;
+    std::cout << "         | |_) / _ \ | |_) |  _| | |_) |" std::endl;
+    std::cout << "         |  __/ ___ \|  __/| |___|  _ < " std::endl;
+    std::cout << "         |_| /_/   \_\_|   |_____|_| \_\" std::endl;
     std::cout << "   ____   ____ ___ ____ ____   ___  ____  ____   " std::endl;
     std::cout << "  / ___| / ___|_ _/ ___/ ___| / _ \|  _ \/ ___|  " std::endl;
     std::cout << "  \___ \| |    | |\___ \___ \| | | | |_) \___ \  " std::endl;
@@ -43,9 +43,10 @@ int main() {
     Referee referee;
     Human human(humanName);
     Computer computer;
+    human.addUser(humanName);
 
     int winStreak = 0;
-    int highscore = 0;
+    int highscore = human.getHighscore(humanName);
 
     std::string playAgain = "YES";
 
@@ -65,12 +66,9 @@ int main() {
             }
             if (winStreak > highscore) {
                 highscore = winStreak;
+                human.changeHighscore(humanName, highscore);
             }
         }
-
-        
-        //UPDATE HIGHSCORE
-
         
         std::cout << "-----------------------------------------------------" << std::endl;   
         std::endl;
