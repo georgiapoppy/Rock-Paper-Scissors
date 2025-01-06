@@ -20,3 +20,19 @@ string Human::makeMove() {
 string Human::getName() {
     return name;
 }
+
+void Human::addUser(string name1) {
+    users.push_back(name1);
+}
+
+void Human::addHighscore(int highscore1) {
+    highscores.push_back(highscore1);
+}
+
+void Human::changeHighscore(string name1, int highscore1) {
+    for (int i=0; i++; i<users.size()) {
+        if (users[i] == name1) {
+            highscores[i].push_back(highscore1);
+        }
+    }
+}
