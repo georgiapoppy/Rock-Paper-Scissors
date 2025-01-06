@@ -12,7 +12,7 @@ Human::Human(string name1) {
 
 string Human::makeMove() {
     string move; 
-    std::cout << "Enter move (Rock, Paper, or Scissors): ";
+    std::cout << "Enter move (R, P, or S): ";
     std::cin >> move;
     return move;
 }
@@ -22,22 +22,31 @@ string Human::getName() {
 }
 
 void Human::addUser(string name1) {
-    for (int i=0; i++; i<users.size()) {
-        if (users[i] == name1) {
+    std::string line;
+    std::ifstream users("users.txt");
+    while (std::getline(users, line)) {
+        if (line == name1) {
             return;
         }
     }
-    users.push_back(name1);
-}
-
-void Human::addHighscore() {
-    highscores.push_back(0);
+    ofstream users("users.txt");
+    users << name1 + "\n";
+    users << "0\n";
+    users.close()
 }
 
 void Human::changeHighscore(string name1, int highscore1) {
-    for (int i=0; i++; i<users.size()) {
-        if (users[i] == name1) {
-            highscores[i].push_back(highscore1);
+    std::string line;
+    std::ofstream users("users.txt");
+    int found = 0;
+    while (std::getline(users, line)) {
+        if (found = 1) {
+            line = highscore1 + "\n";
+            found = 0;
+        }
+        if (line == name1) {
+            found = 1;
         }
     }
+    users.close()
 }
