@@ -3,19 +3,19 @@
 #include <string.h>
 #include <random> 
 
-string Computer::makeMove() {
+char Computer::makeMove() {
     random_device rand;
     mt19937 gen(rand());
     uniform_int_distribution<>dis(1,3);
     int random = dis(gen);
     if (random == 1) {
-        return "Rock";
+        return 'R';
     } else if (random == 2) {
-        return "Paper";
+        return 'P';
     } else if (random == 3) {
-        return "Paper";
+        return 'S';
     }
-    return "NULL";
+    return 'N';
 }
 
 string Computer::getName() {

@@ -14,7 +14,10 @@ Player* Referee::refGame(Player * player1, Player * player2) {
     else if ((move1 == 'R' && move2 == 'S') || (move1 == 'S' && move2 == 'P') || (move1 == 'P' && move2 == 'R')) {
         return player1;
     }
-    else {
+    else if ((move1 == 'N') || (move2 == 'N')) {
+        std::cout << "ERROR. Input must be either R, S, or P (CAPITAL  LETTERS)" << std::endl;
+        return NULL;
+    } else {
         return player2;
     }
 }
