@@ -43,9 +43,9 @@ int main() {
     std::cout << "-----------------------------------------------------" << std::endl;   
     std::cout << std::endl; 
     usleep(300000);                                  
-    std::cout << "Welcome to Rock Paper Scissors! Play against a computer and try to win." << std::endl;
+    std::cout << "Welcome! Play against a computer and try to win." << std::endl;
     usleep(300000);
-    std::cout << "Type R for Rock, P for Paper, and S for Scissors :)" << std::endl;
+    std::cout << "Type R for Rock, P for Paper, and S for Scissors." << std::endl;
     usleep(300000);
     std::cout << "Type YES to play again and NO to stop :)" << std::endl;    
     usleep(300000);
@@ -84,7 +84,6 @@ int main() {
             usleep(300000);
             std::cout << name << " Wins!" << std::endl;
             usleep(300000);
-            std::cout << std::endl;
             if (name == humanName) {
                 winStreak++;
             } else {
