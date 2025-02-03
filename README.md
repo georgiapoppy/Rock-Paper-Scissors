@@ -11,3 +11,5 @@ in the terminal to play :)
 **INSTRUCTIONS:**
 - Type R for Rock, P for Paper, and S for scissors.
 - When asked to play again, type YES to play again or NO to not.
+
+![alt text](https://i.pinimg.com/736x/e7/f7/ae/e7f7aece600a3f1cb0267620acae8712.jpg)
