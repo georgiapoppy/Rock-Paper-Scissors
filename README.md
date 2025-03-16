@@ -3,10 +3,18 @@ A C++ Game play Rock Paper Scissors against a Computer :)
 
 Implemented using Classes + Inheritance + Reading and Writing to Files
 
-Load this repository in VSCode and type:
- - 'g++ –std=c++11 main.cpp Computer.cpp Human.cpp Player.cpp Referee.cpp' 
- - then './a.out'
-in the terminal to play :)
+**Set Up:**
+1. Clone GitHub Repository:
+```sh
+git clone https://github.com/georgiapoppy/Rock-Paper-Scissors.git
+```
+3. Type in the terminal:
+```sh
+g++ –std=c++11 main.cpp Computer.cpp Human.cpp Player.cpp Referee.cpp
+```
+```sh
+./a.out
+```
 
 **INSTRUCTIONS:**
 - Type R for Rock, P for Paper, and S for scissors.
